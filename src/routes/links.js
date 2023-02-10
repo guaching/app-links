@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { add } from "../controller/links.controller";
+import { add, form } from "../controller/links.controller";
 
 const router = Router();
 
-router.get("/add", add);
-
+router.get("/add", form);
+router.post("/add", add);
 module.exports = router;
